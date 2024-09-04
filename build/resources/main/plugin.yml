@@ -1,0 +1,11 @@
+name: EpicStone
+version: '1.0.2'
+main: org.eplge627.epicstone.EpicStone
+authors: [Eplge627]
+description: 宝石插件
+softdepend:
+  - Vault
+commands:
+  jbsxr:
+  jbsqc:
+  jbsreload:

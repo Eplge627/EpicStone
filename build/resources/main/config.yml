@@ -1,0 +1,187 @@
+BianJieSetPrefixEnabled: true
+#在使用指令create配置宝石拆卸时候，可以来个前缀就不用去配置改，前缀后面是宝石的名字，不需要的上面填false
+prefix: "§8「 §c灵环 §8」"
+Massages:
+  XrGuiBt: "§a§b§c§r宝石镶嵌 - 装配合适的宝石"
+  QxGuiBt: "§a§b§c§r宝石取出 - 搭配不同宝石达到极致效果"
+  XrGuiItemLore1: "§7[§c宝石槽§7]"
+  XrGuiItemLore: "§7« §c请放入宝石 §7»"
+  QXGuiItemLore: "§7左键取出该宝石"
+  QCNotHaveBS: "请放入带有宝石孔位的装备."
+  QXWrong: "点击按钮貌似不是宝石,请联系管理员."
+  QXSuc: "成功取卸宝石到背包中,请自行查收。"
+  JbsxrMessageBiaoTi: "§f========= §b[鸡宝石吸入帮助] §f========="
+  FirstjbsxrMessage: "§7/jbsxr §a: 打开吸入界面"
+  SecondbsxrMessage: "§7/jbsxr add 孔位名 §a: 给物品加孔Lore"
+  JbsxrMessageWeiBu: "§f========= §b[鸡宝石吸入帮助] §f========="
+  JbsqcMessageBiaoTi: "§f========= §b[鸡宝石拆卸帮助] §f========="
+  FirstjbsqcMessage: "§7/jbsqc §a: 打开拆卸界面"
+  SecondbsqcMessage: "§7/jbsqc create [索引名(必须是在吸收配置有的)] §a: 创建拆卸配置"
+  JbsqcMessageWeiBu: "§f========= §b[鸡宝石拆卸帮助] §f========="
+  WrongSuoYin: "§f[§c系统§f] §a你输入的索引名在吸收配置不存在哦."
+  NotHaveKong: "§f[§c系统§f] §a你输入的索引名在孔设置不存在哦."
+  CreateSuccess: "§f[§c系统§f] §a创建成功."
+  NullItem: "§f[§c系统§f] §a请手持宝石在进行配置."
+  AddEmptyLore: "§f[§c系统§f] §a装备成功添加宝石槽位."
+  SuccessBS: "§f[§c系统§f] §a神乎其神呀,装备成功吸入该宝石！"
+  CrushBS: "§f[§c系统§f] §a此宝石太过于强大,吸入时发生意外,宝石已破碎！"
+  WrongBS: "§f[§c系统§f] §a请联系管理员检查配置§7(宝石,保护符lore不匹配的时候会提示)"
+  NotItems: "§f[§c系统§f] §a请分别在对应槽位放入宝石和装备."
+  NotKong: "§f[§c系统§f] §a当前宝石已无%kong%去镶嵌宝石"
+  PutNotBS: "§f[§c系统§f] §a此槽只能放宝石."
+  PutManyBS: "§f[§c系统§f] §a每次最多吸入一个宝石."
+  PutManyItem: "§f[§c系统§f] §a每次最多放一个装备."
+  PutNotBHF: "§f[§c系统§f] §a此槽只能放保护符."
+  PutManyBHF: "§f[§c系统§f] §a每次最多放一个保护符."
+  PutNotItem: "§f[§c系统§f] §a请放入带有宝石孔位的装备."
+  Announcement: "§f[§c系统§f] §a玩家 §e%p% §a成功为他的器魂吸入 §r%BSName%"
+  XrLevel: "当前等级不符合吸收，至少需要%level%"
+  BHFMessage: "§f[§c系统§f] §a本次吸收失败，但有保护符宝石不碎.."
+  BHPermissionMessage: "§f[§c系统§f] §a本次吸收失败，但有你有吸有概率收不碎权限,本次宝石不碎."
+  BHPermission: "EpicStone.BaoHu"
+##检测魂环lore属性,和自己用的属性插件词条一致就行
+CheckAttribute:
+  ##检测魂环lore属性的位置，在这行lore下面写属性，属性必须每行写属性，中间不能插入其他lore
+  ##比如，这样是对的，中间没有插入其他不是属性lore的lore
+  ##---魂环属性-----
+  ##攻击力：20
+  ##攻击力：20
+  ##比如，这样是错的，中间插入的不是属性lore的lore，会导致检测失败
+  ##---魂环属性-----
+  ##攻击力：20
+  ##阿吧阿吧
+  ##攻击力：20
+  CheckAttributeLore: "§7§m—=—=—=—=§r§6[§c灵环属性§6]§7§m=—=—=—=—§r"
+  ##检测魂环lore属性,和自己用的属性插件词条一致就行
+  Attribute:
+    - "攻击伤害"
+    - "PVP攻击力"
+    - "PVE攻击力"
+    - "命中几率"
+    - "破甲几率"
+    - "暴击几率"
+    - "暴击伤害"
+    - "吸血几率"
+    - "吸血倍率"
+    - "生命上限"
+    - "生命恢复"
+    - "闪避几率"
+    - "物理防御"
+    - "PVP防御力"
+    - "PVE防御力"
+    - "韧性"
+    - "反射几率"
+    - "反射伤害"
+    - "格挡几率"
+    - "格挡伤害"
+    - "经验加成"
+    - "移速加成"
+    - "攻速提升"
+    - "点燃几率"
+    - "凋零几率"
+    - "中毒几率"
+    - "致盲几率"
+    - "缓慢几率"
+    - "雷霆几率"
+    - "撕裂几率"
+    - "生命加成"
+    - "攻击加成"
+    - "PVP伤害加成"
+    - "PVE伤害加成"
+    - "忽视防御"
+    - "防御加成"
+    - "PVP防御加成"
+    - "PVE防御加成"
+    - "暴击抵抗"
+    - "暴伤抵抗"
+    - "反射抵抗"
+    - "忽视减免"
+    - "伤害减免"
+    - "吸血抵抗"
+
+LimitKongLevel:
+  1:
+    KongLevel: 10
+  2:
+    KongLevel: 20
+  3:
+    KongLevel: 30
+##孔设置
+EmptyLore:
+  通用孔:
+    #索引名,请和上面的一样
+    KongSuoYin: "通用孔"
+    ##检测装备词条Lore
+    KongLore: "§8「 §b宝石 §8」§8「 §b暂未镶嵌 §8」"
+  蓝宝石孔:
+    KongSuoYin: "蓝宝石孔"
+    KongLore: "§8「 §b蓝宝石槽 §8」§8「 §b暂未镶嵌 §8」"
+  红宝石孔:
+    KongSuoYin: "红宝石孔"
+    KongLore: "§8「 §b蓝宝石槽 §8」§8「 §b暂未镶嵌 §8」"
+##保护符的名字(不可拓展)
+BHFName: "§c§l宝石保护符"
+BHFLore: "我是保护符的词条"
+BS_Items:
+  #物品包含名字词条lore即可镶嵌,物品在其他物品库编写即可
+  蓝宝石:
+    #拆卸索引名,请和上面的一样
+    BSSuoYin: "蓝宝石"
+    #取出配置的金额
+    QCMoney: 10000
+    ##吸入的概率
+    XiRuchance: 50
+    ##检测宝石名字
+    BSName: "§c十万年灵环 §f(冰碧帝皇蝎)"
+    ##检测宝石某行词条lore,完全匹配
+    BSLore: "§7按T打开天书-物品图鉴-灵环图鉴"
+    ##是否有JiBaoShiXr.BaoHu这个权限 的人普通无保护符吸收宝石有概率不破碎(默认Op)
+    EnabledBHPermission: false
+    ##保护的概率上面为false可忽略
+    BaoHuRuchance: 25
+    ##是否吸收成功有公告
+    EnabledAnnouncement: true
+    ##op镶嵌此宝石是否有公告,如果上面写false,这里可以忽略
+    OpAnnouncement: true
+    ##限制哪个孔吸入,上方配置写
+    LimitKong: "蓝宝石孔"
+    ##镶嵌在装备上的的第一行Lore
+    BSXQLore: "§8「 §c宝石 §8」§c§l蓝宝石"
+    ##剩下的行
+    ##两个的结果:
+    ##已镶嵌极光石
+    ##攻击伤害: 500
+    ##防御力: 500
+  红宝石:
+    BSSuoYin: "红宝石"
+    XiRuchance: 50
+    BSName: "§c§l红宝石"
+    BSLore: "§e通过抽奖兑换"
+    EnabledBHPermission: true
+    BaoHuRuchance: 25
+    EnabledAnnouncement: true
+    OpAnnouncement: true
+    LimitKong: "红宝石孔"
+    BSXQLore: "已镶嵌红宝石"
+  通用宝石1:
+    BSSuoYin: "通用宝石1"
+    XiRuchance: 50
+    BSName: "§c§l通用宝石1"
+    BSLore: "§e通过抽奖兑换"
+    EnabledBHPermission: true
+    BaoHuRuchance: 25
+    EnabledAnnouncement: true
+    OpAnnouncement: false
+    LimitKong: "通用孔"
+    BSXQLore: "已镶嵌通用宝石1"
+  通用宝石2:
+    BSSuoYin: "通用宝石2"
+    XiRuchance: 50
+    BSName: "§c§l通用宝石2"
+    BSLore: "§e通过抽奖兑换"
+    EnabledBHPermission: true
+    BaoHuRuchance: 25
+    EnabledAnnouncement: true
+    OpAnnouncement: false
+    LimitKong: "通用孔"
+    BSXQLore: "已镶嵌通用宝石2"
